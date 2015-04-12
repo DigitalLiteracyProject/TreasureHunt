@@ -4,6 +4,7 @@
 	var bh = 400;
 	var p = 10;
 
+
 function init() {
 
 
@@ -36,5 +37,26 @@ function bury() {
 	$.each($('#loc').serializeArray(), function(i, field) {
     	values[field.name] = field.value;
 	});
-	console.log(values)
+	var x = values.xcor;
+	var y = values.ycor;
+
+	// var stage = new createjs.Stage("canvas");
+	var canvas = $("#canvas")[0].getContext("2d");
+	canvas.beginPath();
+	canvas.arc(x, y, 20, 0, 2 * Math.PI, false);
+	canvas.fillStyle = 'yellow';
+	canvas.fill();
+	canvas.lineWidth = 2;
+	canvas.strokeStyle = '#003300';
+	canvas.stroke();
+	// console.log(typeof(canvas));
+	// console.log(typeof(stage));
+
+	// var circle = new createjs.Shape();
+    // circle.graphics.beginFill("red").drawCircle(x, y, 20);
+    //Set position of Shape instance.
+    // stage.addChild(circle);
+    // stage.addChild(canvas);
+    //Update stage will render next frame
+    // stage.update();
 }
