@@ -1,0 +1,7 @@
+ possible techs:
+
+creatjs/easeljs - uses html5 canvas
+
+building a webapp framework:
+
+bower -> package manager for javascript
