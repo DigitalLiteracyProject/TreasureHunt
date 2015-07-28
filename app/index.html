@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
-    <script src="../scripts/main.js"></script>>
+    <script src="../scripts/main.js"></script>
     <!-- endbuild -->
   </head>
   <body onload="init();">
@@ -24,21 +24,35 @@
     <![endif]-->
     <div class="container">     
       <div class="span12">      
-        <canvas id="canvas" width="500" height="500"></canvas>
+        <canvas id="canvas" width="600" height="600"></canvas>
       </div> 
     </div>
     
     <div class="container">     
       <div class="span12">  
-        <form id="loc">
+        <form class="navbar-form navbar-left" id="loc">
+          X-coordinate:<br>
+          <input type="text" name="xcor">
+        <br>
+          Y-coordinate:<br>
+          <input type="text" name="ycor">
+          <input class="btn btn-default" type="button" onclick="bury();" value="Bury">
+          <input class="btn btn-default" type="button" onclick="gameBegin();" value="Begin!">
+        </form>
+      </div> 
+
+    <div class="container">
+      <div class="span12">   
+        <form class="navbar-form navbar-right" id="hunt" style="display: none;">
           X-coordinate:<br>
           <input type="text" name="xcor">
         <br>
           Y-coordinate:<br>
           <input type="text" name="ycor">
           <input type="button" onclick="bury();" value="Bury">
+          <input type="button" onclick="gameBegin();" value="Begin!">
         </form>
-      </div> 
+      </div>  
     </div>
 
 
